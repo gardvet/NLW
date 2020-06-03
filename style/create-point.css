@@ -1,0 +1,89 @@
+#create-point {
+    width: 90%; 
+    max-width: 1100px;
+    margin: 0 auto;
+}
+#create-point header {
+    margin-top: 40px;
+    display: flex; /*Necessário o display para as modificações dos objetos que estão em linha*/
+    justify-content: space-between; /*separar os elementos com um espaço entre eles*/
+    align-items: center;
+}
+#create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex; /*Aqui o display e o align é que permite alinhar a setinha corretamente*/
+    align-items: center;
+} 
+#create-point header a span {
+    margin-right: 15px;
+    background-image: url(../assets/arrow-left.svg); /*assim que insere a imagem não funciona tem q definir largura e altura e o display*/
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+form {
+    background-color: white;
+    margin: 80px auto; /*Centralizar por fora a caixa */
+    padding: 65px;
+    border-radius: 8px;
+    max-width: 750px;
+    box-sizing: border-box; /*usado para evitar que o valor do padding seja adicionado*/
+}
+form h1 {
+    font-size: 36px;
+}
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+form legend {
+    margin-bottom: 40px;
+}
+form legend h2 {
+    font-size: 24px;
+}
+form .field {
+    flex: 1; /*O flex 1 é para preencher a coluna usa no pai os filhos herdam*/
+    display: flex; /*Lembrar que o display usa em pai e filho*/
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+form .field-group {
+    display: flex;
+}
+form input, form select {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    outline: none; /*Tirar a linha preta da seleção*/
+    border-radius: 8px;
+}
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form label {
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+form .field-group .field + .field {
+    margin-left: 24px; /*Separar os campos de preenchimento*/
+}
+form button {
+    width: 260px;
+    height: 54px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: 400ms;
+}
+form button:hover {
+    background-color: #2fb86e;
+}
